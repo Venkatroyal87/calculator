@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .A1
+            {
+            text-align:center;  
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(9, 255, 0);
+            border: 6px dashed black;
+            background:linear-gradient(rgb(107, 16, 16),rgb(11, 11, 87),black);
+            border-color: chocolate;
+            
+            width: 200px;
+            margin:30px;
+            margin-left: 190px;
+            margin-right: 140px;
+            background-clip: content-box;
+           
+            background:linear-gradient(rgb(rgb(255, 0, 0) 255),rgb(60, 0, 255));
+            }
+        .A2
+        {
+            height: 300px;
+            width: 400px;
+            border: 8px solid rgb(82, 71, 194);
+             background:linear-gradient(rgb(177, 38, 38),rgb(221, 228, 208));
+             
+            position: relative;
+            left:100px;
+            border-style: dashed;
+            
+        }
+        .num1{
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: 6px solid black;
+            font-family:sans-serif;
+            margin-left: 70px;
+            margin-top: 30px;
+            text-align: center;
+            border-style: double;
+            border-color: black;
+            background-color: rgb(193, 198, 202);
+        }
+        .num1:hover
+        {
+            background-color: rgb(17, 230, 134);
+            
+            transform: rotatex(360deg);
+        }
+        .num2{
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: 6px solid black;
+            margin-left: 40px;
+            margin-top: 30px;
+            text-align: center;
+            border-style: double;
+            border-color: black;
+            background-color: rgb(193, 198, 202);
+        }
+        .num2:hover
+        {
+            background-color: rgb(17, 230, 134);
+            
+            transform: rotatex(360deg);
+        }
+        .add{
+            height: 50px;
+            width: 50px;
+            margin-left: 80px;
+            border: 5px solid black;
+            border-radius: 10px;
+            border-style: double;
+            font-size: larger;
+            background-color:silver
+        }
+        .add:hover
+        {
+            background-color: rgb(17, 230, 134);
+        }
+        .sub{
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-size: larger;
+           
+            border: 5px solid black;
+            background-color:silver;
+            border-style: double;
+        } .sub:hover
+        {
+            background-color: rgb(17, 230, 134);
+        }
+        .multi{
+            height: 50px;
+            width: 50px;
+            border-radius: 10px; 
+           margin-left: 10px;
+           font-size: larger;
+           border: 5px solid black;
+           background-color:silver;
+           border-style: double;
+        } .multi:hover
+        {
+            background-color: rgb(17, 230, 134);
+        }
+        .div{
+            height: 50px;
+            width: 50px;
+            border-radius: 10px; 
+            margin-left: 10px;
+            font-size: larger;
+            border: 5px solid black;
+            background-color:silver;
+            border-style: double;
+        }
+        .div:hover
+        {
+            background-color: rgb(17, 230, 134);
+        }
+      .result{
+            width: 100px;
+            height: 40px;
+            border: 3px solid black;
+            border-radius: 15px;
+           margin-left: 120px;
+           text-align: center;
+           border-style: double;
+           border-width: 6px;
+           background-color:silver;
+      }
+      .result:hover
+        {
+            background-color: rgb(17, 230, 134);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="A1">Calculator</h1>
+    <div class="A2">  
+            
+            
+            <input id="i1" class="num1" type="number" placeholder="NUM1">
+            <input id="i2" class="num2" type="number" placeholder="NUM1"><br><br><br>
+            <button onclick="add()" class="add" >+</button>
+            <button onclick="sub()" class="sub" >-</button>
+            <button onclick="multi()" class="multi">*</button>
+            <button onclick="div()" class="div"> /</button><br><br><br>
+     
+            <input id="r" class="result" type="number" placeholder="RESULT">
+         </div>
+    </div>
+    <script>
+        function add(){
+         let num1=Number(document.getElementById('i1').value);
+         let num2=Number(document.getElementById('i2').value);
+         let res=num1+num2;
+         document.getElementById('r').value=res;
+        }
+        function sub(){
+         let num1=Number(document.getElementById('i1').value);
+         let num2=Number(document.getElementById('i2').value);
+         let res=num1-num2;
+         document.getElementById('r').value=res;
+        }
+        function multi(){
+         let num1=Number(document.getElementById('i1').value);
+         let num2=Number(document.getElementById('i2').value);
+         let res=num1*num2;
+         document.getElementById('r').value=res;
+        }
+        function div(){
+         let num1=Number(document.getElementById('i1').value);
+         let num2=Number(document.getElementById('i2').value);
+         let res=num1/num2;
+         document.getElementById('r').value=res;
+        }
+    </script>
+    
+</body>
+</html>
